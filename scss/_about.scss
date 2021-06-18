@@ -1,0 +1,30 @@
+.about {
+  display: grid;
+  grid-template-rows: 266px 1fr 266px;
+
+  .about__img-dark {
+    background-image: url('/images/image-about-dark.jpg');
+    background-size: cover;
+    grid-row-start: 1;
+  }
+  .about__img-light {
+    background-image: url('/images/image-about-light.jpg');
+    background-size: cover;
+    grid-row-start: 3;
+  }
+
+  .about__text {
+    grid-row-start: 2;
+    padding: 4rem 2rem;
+    .about__heading {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+    }
+    .about__paragraph {
+      margin-top: 1em;
+      color: $primary-color-1;
+      line-height: 1.2rem;
+    }
+  }
+}

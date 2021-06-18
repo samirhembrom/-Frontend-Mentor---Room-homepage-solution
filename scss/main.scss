@@ -1,0 +1,39 @@
+@import 'config';
+@import 'slider';
+@import 'menu';
+@import 'slideshow';
+@import 'about';
+@import 'responsive';
+
+body {
+  background-color: $primary-color-3;
+  font-size: 12px;
+  font-family: $primary-font;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px dashed $primary-color-2;
+  outline-offset: 2px;
+}
+
+header {
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  padding: 2rem;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}

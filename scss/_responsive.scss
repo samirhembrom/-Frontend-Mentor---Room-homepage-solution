@@ -1,0 +1,118 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+    display: block;
+    width: auto;
+    .menu-nav {
+      margin-left: 11em;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+
+      margin-right: auto;
+      &__item {
+        display: inline;
+        transform: translateX(0);
+      }
+      &__link {
+        font-size: 1.5rem;
+        padding: 1em;
+        margin-top: 4.9em;
+        font-size: 1rem;
+        color: $primary-color-3;
+        &::after {
+          border: 1px solid $primary-color-3;
+        }
+      }
+    }
+  }
+  .logo-top {
+    position: fixed;
+    left: 0;
+    transform: translateX(0);
+    margin-left: 3em;
+    margin-top: 5.25em;
+  }
+}
+
+@include media-lg {
+  .slideshow-container {
+    display: grid;
+    height: 534px;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: auto;
+
+    .slide-img {
+      &__img-1 {
+        background-image: url('/images/desktop-image-hero-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 534px;
+      }
+      &__img-2 {
+        background-image: url('/images/desktop-image-hero-2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 534px;
+      }
+      &__img-3 {
+        background-image: url('/images/desktop-image-hero-3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 534px;
+      }
+    }
+    .slide-info-container {
+      padding: 9.25em 5.35em;
+      .slide-info {
+        .slide-info__heading {
+          font-size: clamp(1.2rem, 3vw, 2rem);
+        }
+
+        .slide-info__paragraph {
+          font-size: 0.77rem;
+        }
+        .cta-btn {
+          position: static;
+          margin-top: 2em;
+        }
+      }
+    }
+
+    .prev {
+      top: calc(100% - 80px);
+      left: calc(57.6% + 56px);
+      height: 80px;
+      width: 80px;
+    }
+    .next {
+      top: calc(100% - 80px);
+      left: calc(58.6% + (56px * 2));
+      height: 80px;
+      width: 80px;
+    }
+  }
+  .about {
+    grid-template-rows: 266px;
+    grid-template-columns: 420px 1fr 440px;
+
+    .about__img-dark {
+      grid-column-start: 1;
+    }
+    .about__img-light {
+      grid-column-start: 3;
+      grid-row-start: 1;
+    }
+    .about__text {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+  }
+}

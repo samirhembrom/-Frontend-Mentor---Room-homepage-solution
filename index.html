@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        display: none;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
+  <body class>
+    <header>
+      <div class="menu-btn" tabindex="0">
+        <span class="menu-btn__burger"></span>
+      </div>
+      <nav class="nav">
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="#!" class="menu-nav__link">Home</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#!" class="menu-nav__link">Shop</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#!" class="menu-nav__link">About</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="#!" class="menu-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#!" class="logo-top">
+        <img src="images/logo.svg" alt="Room Home" />
+      </a>
+    </header>
+    <main>
+      <section class="slideshow-container">
+        <div class="slide-img-container">
+          <div class="slide-img__img-1 slide-img fade"></div>
+          <div class="slide-img__img-2 slide-img fade"></div>
+          <div class="slide-img__img-3 slide-img fade"></div>
+        </div>
+        <div class="slide-info-container">
+          <div class="slide-info__info-1 slide-info">
+            <h1 class="slide-info__heading">
+              Discover innovative ways to decorate
+            </h1>
+            <p class="slide-info__paragraph">
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <a href="#!" class="cta-btn">Shop now&#8594;</a>
+          </div>
+          <div class="slide-info__info-2 slide-info">
+            <h1 class="slide-info__heading">
+              We are available all across the globe
+            </h1>
+            <p class="slide-info__paragraph">
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <a href="#!" class="cta-btn">Shop now&#8594;</a>
+          </div>
+          <div class="slide-info__info-3 slide-info">
+            <h1 class="slide-info__heading">
+              Manufactured with the best materials
+            </h1>
+            <p class="slide-info__paragraph">
+              Our modern furniture store provide a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office.
+            </p>
+            <a href="#!" class="cta-btn">Shop now&#8594;</a>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)"></a>
+        <a class="next" onclick="plusSlides(1)"></a>
+      </section>
+
+      <section class="about">
+        <div class="about__img-dark"></div>
+        <div class="about__img-light"></div>
+        <div class="about__text">
+          <h2 class="about__heading">About our furniture</h2>
+          <p class="about__paragraph">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <div class="overlay"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

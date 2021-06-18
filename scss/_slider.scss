@@ -1,0 +1,25 @@
+.slideshow-container {
+  display: grid;
+  grid-template-rows: 27.75em 36.25em;
+
+  .slide-img {
+    &__img-1 {
+      background-image: url('/images/mobile-image-hero-1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
+    }
+    &__img-2 {
+      background-image: url('/images/mobile-image-hero-2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
+    }
+    &__img-3 {
+      background-image: url('/images/mobile-image-hero-3.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 350px;
+    }
+  }
+}

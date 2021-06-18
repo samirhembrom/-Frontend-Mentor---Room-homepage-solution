@@ -1,0 +1,150 @@
+.menu-btn {
+  @include transition-ease;
+  position: absolute;
+  z-index: 10;
+  left: 2rem;
+  top: 2rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  &:focus-within {
+    outline: 2px dashed $primary-color-2;
+    outline-offset: 2px;
+  }
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 20px;
+    height: 3px;
+    background: $primary-color-3;
+    @include transition-ease;
+    &::before {
+      content: '';
+      position: absolute;
+      transform: translateY(-8px);
+      width: 20px;
+      height: 3px;
+      background: $primary-color-3;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateY(8px);
+      width: 20px;
+      height: 3px;
+      background: $primary-color-3;
+    }
+
+    &.open {
+      transform: rotate(360deg);
+      background: transparent;
+
+      &::before {
+        background: silver;
+        transform: rotate(135deg);
+      }
+      &::after {
+        background: silver;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+
+.logo-top {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    width: 5rem;
+  }
+}
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+  .menu-nav {
+    height: 11vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $primary-color-3;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      text-transform: lowercase;
+      font-weight: 700;
+      color: $primary-color-2;
+      padding: 0 1rem;
+      @include transition-ease;
+
+      &::after {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        content: '';
+        border: 1px solid $primary-color-2;
+        transform: scaleX(0);
+        @include transition-ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
